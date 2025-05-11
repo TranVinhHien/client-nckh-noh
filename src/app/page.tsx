@@ -99,7 +99,8 @@ export default function Home() {
 
 
   return (
-    <div className='flex p-3 w-100' style={{ marginTop: '4rem', display: 'flex' }}>
+    // <div className='flex p-3 w-100' style={{ marginTop: '4rem', display: 'flex' }}>
+    <div className='flex p-3 w-100' style={{  display: 'flex' }}>
     <div className='flex p-3'>
     {/* <DataView style={{width:"250px"}} value={contents} listTemplate={listTemplate} /> */}
     </div>

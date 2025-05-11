@@ -26,7 +26,7 @@ const  sharedValue = useGlobal();
         <div>
             <div className='min-h-screen surface-100 overflow-hidden m-0'>
                 <div >
-                    {sharedValue.showHeader  &&   <Header onClick={toggleSidebar} />}
+                    {/* {sharedValue.showHeader  &&   <Header onClick={toggleSidebar} />} */}
                     {childrenWithProps}
                    
                 </div>

@@ -19,7 +19,7 @@ const scrollY = keyframes`
 
 const commonStyles = (props: { isPlaying: boolean }) => css`
   flex-shrink: 0;
-  display: flex;
+  display:  flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -43,8 +43,8 @@ const App: React.FC<AppProps> = ({ onSave, text }) => {
   const [showControls, setShowControls] = useState<boolean>(true); // ẩn hiện các nút
   const inactivityTimerRef = useRef<NodeJS.Timeout>();// lấy thời gian để ẩn controollerr
   const [isPlaying, setIsPlaying] = useState<boolean>(true);// tùy chỉnh chạy hay không
-  const [speed, setSpeed] = useState<number>(1);// tốc độ phát
-  const [size, setSize] = useState<number>(24);// tốc độ phát
+  const [speed, setSpeed] = useState<number>(0.05);// tốc độ phát
+  const [size, setSize] = useState<number>(60);// tốc độ phát
   const sizeEditRef = useRef<HTMLDivElement>(null);// set siZeable
 
   const [viewportHeight, setViewportHeight] = useState<number>(0);// cài chung với thằng speed
@@ -78,7 +78,6 @@ const App: React.FC<AppProps> = ({ onSave, text }) => {
 
 
   useEffect(() => {
-    console.log("size",size,"rèf",sizeEditRef)
     if (sizeEditRef.current) {
       sizeEditRef.current.style.setProperty("font-size", `${size}px`);
     }
